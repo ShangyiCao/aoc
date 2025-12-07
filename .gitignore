@@ -1,6 +1,7 @@
 source/2022
 source/2023
 source/2024
-*.txt
+demo.txt
+input.txt
 *.exe
 build/
