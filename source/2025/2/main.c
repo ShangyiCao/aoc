@@ -52,7 +52,6 @@ int main(int argc, char **argv) {
             }
           }
           if (valid) {
-            printf("Found %ld with repeat %d\n", x, repeat);
             counter2 += x;
             break;
           }
