@@ -20,7 +20,13 @@ add_executable(2025_8.exe 8.c)
 target_include_directories(2025_8.exe PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
 add_executable(2025_9.exe 9.c)
+
 add_executable(2025_10.exe 10.c)
+find_library(GLPK_LIB glpk REQUIRED)
+find_path(GLPK_INCLUDE_DIR glpk.h REQUIRED)
+target_include_directories(2025_10.exe PRIVATE ${CMAKE_SOURCE_DIR}/include ${GLPK_INCLUDE_DIR})
+target_link_libraries(2025_10.exe PRIVATE ${GLPK_LIB})
+
 add_executable(2025_11.exe 11.c)
 target_include_directories(2025_11.exe PRIVATE ${CMAKE_SOURCE_DIR}/include)
 
