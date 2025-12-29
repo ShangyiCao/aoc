@@ -49,8 +49,7 @@ bool intersects(const Pair *edge1, const Pair *edge2) {
     return edge1->a.y > edge2->a.y && edge1->a.y < edge2->b.y &&
            edge2->a.x > edge1->a.x && edge2->a.x < edge1->b.x;
   } else {
-    return edge2->a.y > edge1->a.y && edge2->a.y < edge1->b.y &&
-           edge1->a.x > edge2->a.x && edge1->a.x < edge2->b.x;
+    return intersects(edge2, edge1);
   }
 }
 
